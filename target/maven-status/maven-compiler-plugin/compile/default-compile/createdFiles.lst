@@ -1,0 +1,8 @@
+client\ApiConstants.class
+client\BurgerSpecification.class
+orders\OrderApi.class
+orders\Order.class
+user\UserApi.class
+user\User.class
+user\UserGenerateData.class
+user\UserNewData.class
