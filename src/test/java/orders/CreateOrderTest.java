@@ -1,6 +1,7 @@
 package orders;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
@@ -23,6 +24,7 @@ public class CreateOrderTest {
     private String bearerToken;
 
     @Before
+    @Step("Генерирование данных")
     public void setUp() {
         userApi = new UserApi();
         user = new UserGenerateData().getRandomUser();
@@ -73,6 +75,7 @@ public class CreateOrderTest {
         responseCreateOrder.assertThat().statusCode(SC_INTERNAL_SERVER_ERROR);
     }
     @After
+    @Step("Выход")
     public void tearDown() {
         if (bearerToken == null) return;
         userApi.deleteUser(bearerToken);
