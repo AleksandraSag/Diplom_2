@@ -1,0 +1,5 @@
+user\LoginUserTest.class
+orders\CreateOrderTest.class
+orders\OrdersUserTest.class
+user\CreateUserTest.class
+user\UpdateUserTest.class
